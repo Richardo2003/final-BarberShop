@@ -71,7 +71,7 @@ function Contact() {
                 <div className="contact-block">
                     <h6 className="mb-0">
                     <i className="custom-icon bi-shop me-3" />
-                    <strong>Open Daily</strong>
+                    <strong>Open Daily.</strong>
                     <span className="ms-auto">12:00 AM - 22:00 PM</span>
                     </h6>
                 </div>
