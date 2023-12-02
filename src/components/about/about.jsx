@@ -3,17 +3,16 @@ import { getDatabase, ref, onValue } from "firebase/database";
 // import axios from "axios";
 
 function About() {
-  const [heading, setHeading] = useState("");
-  const [subheading, setSubheading] = useState("");
-  // const [gambar, setGambar] = useState("");
+  const [best, setBest] = useState("");
+ 
 
   useEffect(() => {
     const db = getDatabase();
     const historyRef = ref(db, "about/");
     onValue(historyRef, (snapshot) => {
       const data = snapshot.val();
-      setHeading(data.heading);
-      setSubheading(data.subheading);
+      setBest(data.best);
+    
     });
   }, []);
   return (
@@ -22,13 +21,13 @@ function About() {
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-12 mx-auto">
-                <h2 className="mb-4">{heading}</h2>
+                <h2 className="mb-4">{best}</h2>
                 <div className="border-bottom pb-3 mb-5">
-                  <p>{subheading}</p>
+                  <p></p>
                 </div>
               </div>
 
-              <h6 className="mb-5">Meet Babers</h6>
+              <h6 className="mb-5">Meet Barbers</h6>
               <div className="col-lg-5 col-12 custom-block-bg-overlay-wrap me-lg-5 mb-5 mb-lg-0">
                 <img
                   src="images/barber/andre.jpg"
