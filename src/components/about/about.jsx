@@ -1,14 +1,27 @@
-const About = () => {
-  return (
+import { useEffect, useState } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+// import axios from "axios";
 
+function About() {
+  const [best, setBest] = useState("");
+  // const [gambar, setGambar] = useState("");
+
+  useEffect(() => {
+    const db = getDatabase();
+    const historyRef = ref(db, "about/");
+    onValue(historyRef, (snapshot) => {
+      const data = snapshot.val();
+      setBest(data.best);
+    });
+  }, []);
+  return (
       <div className="col-md-8 ms-sm-auto col-lg-9 p-0">
         <section className="about-section section-padding" id="section_2">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-12 mx-auto">
-                <h2 className="mb-4">Best Hairdressers</h2>
+                <h2 className="mb-4">{best}</h2>
                 <div className="border-bottom pb-3 mb-5">
-                  <p></p>
                 </div>
               </div>
 
@@ -59,6 +72,6 @@ const About = () => {
           </div>
         </section>
       </div>
-  )
+  );
 }
 export default About;
