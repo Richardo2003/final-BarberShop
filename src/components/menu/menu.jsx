@@ -28,7 +28,7 @@ function Menu() {
         <a className="nav-link click-scroll" href="#section_1">{Home}</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link click-scroll" href="#section_2">Our Story</a>
+        <a className="nav-link click-scroll" href="#section_2">Hairdressers</a>
       </li>
       <li className="nav-item">
         <a className="nav-link click-scroll" href="#section_3">{Services}</a>
