@@ -1,30 +1,14 @@
-import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
-// import axios from "axios";
-
-function About() {
-  const [heading, setHeading] = useState("");
-  const [subheading, setSubheading] = useState("");
-  // const [gambar, setGambar] = useState("");
-
-  useEffect(() => {
-    const db = getDatabase();
-    const historyRef = ref(db, "about/");
-    onValue(historyRef, (snapshot) => {
-      const data = snapshot.val();
-      setHeading(data.heading);
-      setSubheading(data.subheading);
-    });
-  }, []);
+const About = () => {
   return (
+
       <div className="col-md-8 ms-sm-auto col-lg-9 p-0">
         <section className="about-section section-padding" id="section_2">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 col-12 mx-auto">
-                <h2 className="mb-4">{heading}</h2>
+                <h2 className="mb-4">Best Hairdressers</h2>
                 <div className="border-bottom pb-3 mb-5">
-                  <p>{subheading}</p>
+                  <p></p>
                 </div>
               </div>
 
@@ -75,6 +59,6 @@ function About() {
           </div>
         </section>
       </div>
-  );
+  )
 }
 export default About;
