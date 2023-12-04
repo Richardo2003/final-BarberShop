@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "firebase/database";
+import { getDatabase, ref, onValue } from "../../config/Firebase";
 // import axios from "axios";
 
 function Button() {
