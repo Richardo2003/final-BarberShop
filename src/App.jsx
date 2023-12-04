@@ -10,7 +10,7 @@ import Menu from "./components/menu/menu"
 import Navbar from "./components/navbar/navbar"
 import Pricelist from "./components/pricelist/pricelist"
 import Service from "./components/service/service"
-import "./config/Firebase/index"
+import "./config/Firebase"
 
 const App = () => {
   

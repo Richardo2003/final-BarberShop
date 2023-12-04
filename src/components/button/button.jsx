@@ -27,7 +27,7 @@ function Button() {
         <p className="text-black">{quotes}</p>
 
         <br />
-        <a className="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2">About Us</a>
+        <a className="btn custom-btn custom-border-btn custom-btn-bg-white smoothscroll me-2 mb-2" href="#section_2">Hairdressers</a>
         <a className="btn custom-btn smoothscroll mb-2" href="#section_3">What we do</a>
         </div>
     </div>
