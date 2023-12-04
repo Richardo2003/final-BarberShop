@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDatabase, ref, onValue } from "../../config/Firebase";
+import { getDatabase, ref, onValue } from "firebase/database";
 // import axios from "axios";
 
 function Footer() {
